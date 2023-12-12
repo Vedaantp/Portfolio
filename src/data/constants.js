@@ -190,6 +190,6 @@ export const projects = [
         description:
             "Developed a 2D ping pong game using the Unity game engine.",
         tags: ["C#", "Unity"],
-        link: "https://vedaantpatel.me/PongGame/index.html",
+        link: "https://vedaantp.github.io/PongGame/",
     },
 ];

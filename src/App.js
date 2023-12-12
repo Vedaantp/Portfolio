@@ -1,6 +1,6 @@
 import './App.css';
 import styled, { ThemeProvider } from 'styled-components';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { darkTheme } from './utils/Themes';
 import Navbar from './components/Navbar';
 import About from './components/About';
@@ -36,6 +36,10 @@ const Wrapper = styled.div`
 `;
 
 function App() {
+  useEffect(() => {
+    document.title = 'Vedaant Patel';
+  }, []);
+
   const [openModal, setOpenModal] = useState({ state: false, project: null });
   console.log(openModal)
   return (
