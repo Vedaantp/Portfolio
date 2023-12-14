@@ -9,6 +9,8 @@ export const darkTheme = {
     button: "#854CE6",
     white: "#FFFFFF",
     black: "#000000",
+    success: "#4CAF50",
+    error: "#94030F",
   };
   
   export const lightTheme = {

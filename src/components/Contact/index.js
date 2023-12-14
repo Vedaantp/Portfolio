@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import { Snackbar } from '@mui/material';
 
 const Container = styled.div`
 display: flex;
@@ -70,7 +69,7 @@ const ContactForm = styled.form`
 
 const ContactTitle = styled.div`
   font-size: 24px;
-  margin-bottom: 6px;
+  margin-bottom: 0px;
   font-weight: 600;
   color: ${({ theme }) => theme.text_primary};
 `
@@ -85,7 +84,7 @@ const ContactInput = styled.input`
   border-radius: 12px;
   padding: 12px 16px;
   &:focus {
-    border: 1px solid ${({ theme }) => theme.primary};
+    border: 1px solid #226ce3;
   }
 `
 
@@ -99,7 +98,7 @@ const ContactInputMessage = styled.textarea`
   border-radius: 12px;
   padding: 12px 16px;
   &:focus {
-    border: 1px solid ${({ theme }) => theme.primary};
+    border: 1px solid #226ce3;
   }
 `
 
@@ -107,10 +106,15 @@ const ContactButton = styled.input`
   width: 100%;
   text-decoration: none;
   text-align: center;
-  background: hsla(271, 100%, 50%, 1);
-  background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-  background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-  background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+  transition: all 0.2s ease-in-out !important;
+  background: hsla(228, 90%, 34%, 1);
+  background: linear-gradient(225deg, hsla(228, 90%, 34%, 1) 0%, hsla(217, 77%, 51%, 1) 100%);
+  background: -moz-linear-gradient(225deg, hsla(228, 90%, 34%, 1) 0%, hsla(217, 77%, 51%, 1) 100%);
+  background: -webkit-linear-gradient(225deg, hsla(228, 90%, 34%, 1) 0%, hsla(217, 77%, 51%, 1) 100%);
+  &:hover {
+    transform: scale(1.05);
+  }
+  transition: all 0.4s ease-in-out;
   padding: 13px 16px;
   margin-top: 2px;
   border-radius: 12px;
@@ -119,27 +123,58 @@ const ContactButton = styled.input`
   font-size: 18px;
   font-weight: 600;
 `
-
-
+const MessageContainer = styled.div`
+  color: ${({ severity , theme}) => severity === 'success' ? theme.success : severity === 'error' ? theme.error : theme.white};
+  // color: ${({theme}) => theme.success};
+  font-size: 20px;
+  margin: 0px 0px;
+`;
 
 const Contact = () => {
 
-  //hooks
-  const [open, setOpen] = React.useState(false);
+  const [formValid, setFormValid] = React.useState(false);
+  const [message, setMessage] = React.useState({ text: '', severity: '' });
   const form = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!formValid) {
+      setMessage({text: "Please fill in all required fields correctly.", severity: 'error'})
+      return
+    }
+
+    const userEmail = e.target.from_email.value;
+
+    if (!isEmailValid(userEmail)) {
+      setMessage({text: 'Please enter a valid email address.', severity: 'error'})
+      return
+    }
+
     emailjs.sendForm('service_tpxbsp8', 'template_l2m6erb', form.current, '7L5MF5pWPXPqsolVY')
       .then((result) => {
-        setOpen(true);
+        setMessage({text: 'Email sent successfully!', severity: 'success'})
+
+        setTimeout(() => {
+          setMessage({ text: '', severity: '' });
+        }, 3000);
+
         form.current.reset();
-      }, (error) => {
-        console.log(error.text);
+      })
+      .catch((error) => {
+        console.error(error);
+        setMessage({text: 'Error sending email. Please try again.', severity: 'error'})
       });
   }
 
+  const handleInputChange = (e) => {
+    setFormValid(form.current.checkValidity());
+  };
 
+  const isEmailValid = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return form.current.querySelector('input[name="from_email"]').checkValidity() && emailRegex.test(email);
+  };
 
   return (
     <Container>
@@ -148,19 +183,21 @@ const Contact = () => {
         <Desc>Feel free to reach out to me for any questions or opportunities!</Desc>
         <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactTitle>Email Me</ContactTitle>
-          <ContactInput placeholder="Your Email" name="from_email" />
-          <ContactInput placeholder="Your Name" name="from_name" />
-          <ContactInput placeholder="Subject" name="subject" />
-          <ContactInputMessage placeholder="Message" rows="4" name="message" />
+          <MessageContainer severity={message.severity}>{message.text}</MessageContainer>
+          <ContactInput placeholder="Your Email" name="from_email" onChange={handleInputChange} required type='email'/>
+          <ContactInput placeholder="Your Name" name="from_name" onChange={handleInputChange} required/>
+          <ContactInput placeholder="Subject" name="subject" onChange={handleInputChange} required/>
+          <ContactInputMessage placeholder="Message" rows="4" name="message" onChange={handleInputChange} required/>
           <ContactButton type="submit" value="Send" />
         </ContactForm>
-        <Snackbar
+        {/* <Snackbar
+          style={{zIndex: "1001"}}
           open={open}
           autoHideDuration={6000}
-          onClose={()=>setOpen(false)}
-          message="Email sent successfully!"
-          severity="success"
-        />
+          onClose={handleSnackBarClose}
+          message={snackBarMessage}
+          severity={snackBarMessage.includes('successfully') ? 'success' : 'error'}
+        /> */}
       </Wrapper>
     </Container>
   )

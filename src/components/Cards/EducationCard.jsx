@@ -23,7 +23,7 @@ text-overflow: ellipsis;
 `;
 
 const Card = styled.div`
-    width: 850px;
+    width: 1000px;
     border-radius: 10px;
     box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
     padding: 12px 16px;
@@ -53,7 +53,7 @@ const Card = styled.div`
         -webkit-line-clamp: unset;
 
     }
-    border: 0.1px solid #854CE6;
+    border: 1px solid #226ce3;
 `;
 
 const Top = styled.div`
@@ -67,6 +67,7 @@ const Image = styled.img`
     background-color: #000;
     border-radius: 10px;
     margin-top: 4px;
+    margin-right: 10px;
     @media only screen and (max-width: 768px){
         height: 40px;
     }
@@ -79,7 +80,7 @@ const Body = styled.div`
 `;
 
 const Name = styled.div`
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 600;
     color: ${({ theme }) => theme.text_primary + 99};
     @media only screen and (max-width: 768px){
@@ -88,7 +89,7 @@ const Name = styled.div`
 `;
 
 const Degree = styled.div`
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 500;
     color: ${({ theme }) => theme.text_secondary + 99};
     @media only screen and (max-width: 768px){
@@ -97,7 +98,7 @@ const Degree = styled.div`
 `;
 
 const Date = styled.div`
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 400;
     color: ${({ theme }) => theme.text_secondary + 80};
     @media only screen and (max-width: 768px){

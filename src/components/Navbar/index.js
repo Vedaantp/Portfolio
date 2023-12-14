@@ -1,5 +1,5 @@
 import React from "react";
-import { useTheme } from "styled-components";
+// import { useTheme } from "styled-components";
 import { DiCssdeck } from "react-icons/di";
 import {FaBars } from "react-icons/fa";
 import { Nav, NavContainer, NavLogo, MobileIcon, MobileMenu, MobileMenuLink, NavItems, NavLink, ButtonContainer, GitHubButton, LinkedInButton, Span } from "./styles";
@@ -7,7 +7,7 @@ import { Bio } from "../../data/constants";
 
 const Navbar = () => {
     const [open, setOpen] = React.useState(false);
-    const theme = useTheme();
+    // const theme = useTheme();
 
     return(
         <Nav>
@@ -46,6 +46,7 @@ const Navbar = () => {
                         GitHub
                     </GitHubButton>
                 </ButtonContainer>
+            </NavContainer>
 
         {open && (
                 <MobileMenu open={open}>
@@ -61,24 +62,23 @@ const Navbar = () => {
                         Projects
                     </MobileMenuLink>
 
-                    <MobileMenuLink href="#skills" onClick={() => {setOpen(!open)}}>
-                        Skills
-                    </MobileMenuLink>
-
                     <MobileMenuLink href="#education" onClick={() => {setOpen(!open)}}>
                         Education
                     </MobileMenuLink>
 
-                    <LinkedInButton style={{padding: "10px 16px", background: `${theme.primary}`, color: "white", width: "max-content",}} href={Bio.linkedin} target="_blank">
+                    <MobileMenuLink href="#skills" onClick={() => {setOpen(!open)}}>
+                        Skills
+                    </MobileMenuLink>
+
+                    <LinkedInButton style={{margin: "0px 0px", padding: "10px 16px", background: "#226ce3", color: "white", width: "max-content",}} href={Bio.linkedin} target="_blank">
                         LinkedIn
                     </LinkedInButton>
 
-                    <GitHubButton style={{padding: "10px 16px", background: `${theme.primary}`, color: "white", width: "max-content",}} href={Bio.github} target="_blank">
+                    <GitHubButton style={{margin: "0px 0px", padding: "10px 16px", background: "#226ce3", color: "white", width: "max-content",}} href={Bio.github} target="_blank">
                         GitHub
                     </GitHubButton>
                 </MobileMenu>
         )}    
-            </NavContainer>
         </Nav>
     );
 }

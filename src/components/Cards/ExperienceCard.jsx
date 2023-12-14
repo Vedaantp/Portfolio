@@ -15,7 +15,7 @@ const Document = styled.img`
 
 const Description = styled.div`
     width: 100%;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 400;
     color: ${({ theme }) => theme.text_primary + 99};
     margin-bottom: 10px;
@@ -34,7 +34,8 @@ text-overflow: ellipsis;
 `;
 
 const Card = styled.div`
-    width: 850px;
+    width: 1000px;
+    margin-top: 10px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
     padding: 12px 16px;
@@ -52,7 +53,7 @@ const Card = styled.div`
     @media only screen and (max-width: 768px){
         padding: 10px;
         gap: 8px;
-        width: 300px;
+        width: 500px;
     }
 
     &:hover ${Document}{
@@ -65,7 +66,7 @@ const Card = styled.div`
 
     }
 
-    border: 0.1px solid #306EE8;
+    border: 1px solid #226ce3;
     box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
 `;
 

@@ -60,36 +60,39 @@ export const MobileIcon = styled.div`
 `;
 
 export const MobileMenu = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 16px;
-  position: absolute;
-  top: 80px;
-  right: 0;
-  width: 100%;
-  padding: 12px 40px 24px 40px;
-  background: ${({ theme }) => theme.card_light + 99};
-  transition: all 0.3s ease-in-out;
-  transform: ${({ open }) => (open ? 'translateY(0)' : 'translateY(-100%)')};
-  border-radius: 0 0 20px 20px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-  opacity: ${({ open }) => (open ? '100%' : '0')};
-  z-index: ${({ open }) => (open ? '1000' : '-1000')};
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    padding: 12px 40px 24px 40px;
+    background: ${({ theme }) => theme.card_light + 99};
+    transition: all 0.3s ease-in-out;
+    transform: ${({ open }) => (open ? 'translateY(0)' : 'translateY(-100%)')};
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    opacity: ${({ open }) => (open ? '100%' : '0')};
+    z-index: ${({ open }) => (open ? '1000' : '-1000')};
+  }
 `;
 
-export const MobileMenuLink = styled(LinkR)`
+export const MobileMenuLink = styled.a`
   color: ${({ theme }) => theme.text_primary};
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
   :hover {
-    color: ${({ theme }) => theme.primary};
+    color: #226ce3;
   }
 
   &.active {
-    border-bottom: 2px solid ${({ theme }) => theme.primary};
+    border-bottom: 2px solid #226ce3;
   }
 `;
 
@@ -114,11 +117,11 @@ export const NavLink = styled.a`
   transition: all 0.2s ease-in-out;
   text-decoration: none;
   :hover {
-    color: ${({ theme }) => theme.primary};
+    color: #226ce3;
   }
 
   &.active {
-    border-bottom: 2px solid ${({ theme }) => theme.primary};
+    border-bottom: 2px solid #226ce3;
   }
 `;
 
@@ -135,13 +138,13 @@ export const ButtonContainer = styled.div`
 `;
 
 export const GitHubButton = styled.a`
-  border: 1.8px solid ${({ theme }) => theme.primary};
+  border: 1.8px solid #226ce3;
   justify-content: center;
   display: flex;
   align-items: center;
   height: 70%;
   border-radius: 20px;
-  color: ${({ theme }) => theme.primary};
+  color: #226ce3;
   cursor: pointer;
   padding: 0 20px;
   margin: 0 20px 0 20px;
@@ -150,7 +153,7 @@ export const GitHubButton = styled.a`
   font-size: 16px;
   transition: all 0.6s ease-in-out;
   :hover {
-    background: ${({ theme }) => theme.primary};
+    background: #226ce3;
     color: ${({ theme }) => theme.white};     
   }
   @media screen and (max-width: 768px) { 
@@ -159,13 +162,13 @@ export const GitHubButton = styled.a`
 `;
 
 export const LinkedInButton = styled.a`
-  border: 1.8px solid ${({ theme }) => theme.primary};
+  border: 1.8px solid #226ce3;
   justify-content: center;
   display: flex;
   align-items: center;
   height: 70%;
   border-radius: 20px;
-  color: ${({ theme }) => theme.primary};
+  color: #226ce3;
   cursor: pointer;
   padding: 0 20px;
   margin: 0 20px 0 20px;
@@ -174,7 +177,7 @@ export const LinkedInButton = styled.a`
   font-size: 16px;
   transition: all 0.6s ease-in-out;
   :hover {
-    background: ${({ theme }) => theme.primary};
+    background: #226ce3;
     color: ${({ theme }) => theme.white};     
   }
   @media screen and (max-width: 768px) { 
