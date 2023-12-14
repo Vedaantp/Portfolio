@@ -9,7 +9,7 @@ export const Bio = {
     description:
         "I am a fourth-year college student studying Computer Science at University of California, Irvine. I am eager to tackle any challenge that comes my way. I am excited to demonstrate the knowledge I have gained from academic and work experiences. I am passionate about programming, music, food, hiking, and video-games.",
     github: "https://github.com/Vedaantp",
-    resume: "https://docs.google.com/document/d/1k5hFXtEsLMOXfsGh0BoALFJDW_J6h6UtOJFNg64LWK4/edit?usp=sharing",
+    resume: "https://drive.google.com/file/d/1DfgP8dR7YXebaDVWATheWUKaZejFUWz2/view?usp=sharing",
     linkedin: "https://www.linkedin.com/in/vedaant-patel/",
     instagram: "https://www.instagram.com/vedaant_patel/",
 };
