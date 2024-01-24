@@ -2,7 +2,8 @@ import React from "react";
 import { AboutContainer, AboutBg, AboutInnerContainer, AboutLeftContainer, AboutRightContainer, Img, Title, TextLoop, Span, ResumeButton, SubTitle } from "./styles";
 import { Bio } from "../../data/constants";
 import Typewriter from "typewriter-effect";
-import AboutImg from "../../images/about.jpeg"
+import AboutImg from "../../images/about.jpeg";
+import Resume from "../../images/Vedaant_Patel_Resume.pdf";
 
 const About = () => {
     return (
@@ -28,7 +29,7 @@ const About = () => {
                             </Span>
                         </TextLoop>
                         <SubTitle>{Bio.description}</SubTitle>
-                        <ResumeButton href={Bio.resume} target='display'>Check Resume</ResumeButton>
+                        <ResumeButton href={Resume} target='_blank'>Check Resume</ResumeButton>
                     </AboutLeftContainer>
 
                     <AboutRightContainer>
