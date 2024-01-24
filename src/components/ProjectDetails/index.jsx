@@ -6,11 +6,11 @@ import styled from 'styled-components'
 const Container = styled.div`
 width: 100%;
 height: 100%;
-position: absolute;
-top: 25%;
+position: relative;
+top: 0%;
 left: 0;
 display: flex;
-align-items: top;
+align-items: center;
 justify-content: center;
 overflow-y: scroll;
 transition: all 0.5s ease;

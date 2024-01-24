@@ -162,6 +162,14 @@ export const education = [
 export const projects = [
     {
         id: 0,
+        title: "Synq'd Mobile App",
+        description:
+            "Developed a collaborative music app, using React Native, allowing users to request and vote on songs that get automatically added to the host’s Spotify queue. Integrated Spotify Web API to provide users real time playback, queue information, and support for automatic queueing functionality. Created a secure Node JS server to manage session and voting functionalities with little overhead.",
+        tags: ["JavaScript", "React Native", "Node JS"],
+        link: "https://apps.apple.com/us/app/synqd/id6476221500",
+    },
+    {
+        id: 1,
         title: "Memory Allocator Simulator",
         description:
             "Developed a best-fit memory allocator in C with a reduced memory fragmentation, efficient resource utilization, and high performance. Implemented block coalescing to reduce fragmentation and allows for users flexibility at allocation.",
@@ -169,7 +177,7 @@ export const projects = [
         link: "https://github.com/Vedaantp/MemoryAllocatorSimulator",
     },
     {
-        id: 1,
+        id: 2,
         title: "MineSweeper Solver",
         description:
             "Developed an algorithm in C++ that can solve minesweeper problems with an accuracy of 80%. Implemented DFS, backtracking, and heuristics to efficiently solve worlds in under 3 minutes.",
@@ -177,7 +185,7 @@ export const projects = [
         link: "https://github.com/Vedaantp/MinesweeperSolver",
     },
     {
-        id: 2,
+        id: 3,
         title: "Graph Coloring Game",
         description:
             "Developed a graph coloring game that allows the user to adjust the graph and nodes to their liking. The objective of the game is to color the graph using the least amount of colors possible, however, a node cannot be the same color as it's neighbor. User can check if their answer is correct and/or see how the algorithm finds the answer.",
@@ -185,7 +193,7 @@ export const projects = [
         link: "https://vedaantp.github.io/GraphColoringGame/",
     },
     {
-        id: 3,
+        id: 4,
         title: "Pong Game",
         description:
             "Developed a 2D ping pong game using the Unity game engine.",
