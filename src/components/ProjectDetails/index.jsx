@@ -132,7 +132,9 @@ const index = ({ openModal, setOpenModal }) => {
                     </Tags>
                     <Desc>{project?.description}</Desc>
                     <ButtonGroup>
-                        <Button href={project?.link} target='_blank'>View Project</Button>
+                        {project?.link && (
+                            <Button href={project?.link} target='_blank'>View Project</Button>
+                        )}
                     </ButtonGroup>
                 </Wrapper>
             </Container>
