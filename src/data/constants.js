@@ -7,7 +7,11 @@ export const Bio = {
         "Programmer",
     ],
     description:
-        "I am a fourth-year college student studying Computer Science at University of California, Irvine. I am eager to tackle any challenge that comes my way. I am excited to demonstrate the knowledge I have gained from academic and work experiences. I am passionate about programming, music, food, hiking, and video-games.",
+        "I am a recent graduate from the University of California, Irvine with a BS in Computer Science. " +
+        "I am eager to tackle any challenge that comes my way. I am excited to demonstrate the knowledge " +
+        "I have gained from academic, work, and project experience. I am passionate about programming, " +
+        "music, food, hiking, and videogames. I also love playing basketball, pickleball, tennis, and volleyball." + 
+        " A little fun fact about me is, I absolutely love monkeys and apes and I am a huge Star Wars fan.",
     github: "https://github.com/Vedaantp",
     resume: "https://drive.google.com/file/d/1DfgP8dR7YXebaDVWATheWUKaZejFUWz2/view?usp=sharing",
     linkedin: "https://www.linkedin.com/in/vedaant-patel/",
@@ -52,6 +56,16 @@ export const skills = [
                 name: "CSS",
                 image:
                     "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png",
+            },
+            {
+                name: "SQL",
+                image:
+                    "https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png",
+            },
+            {
+                name: "MySQL",
+                image:
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqYf4wXKaa-XOfMXnuCttpW3vfbyYH3GiZ7w&s",
             },
         ],
     },
@@ -118,6 +132,16 @@ export const skills = [
                 image:
                     "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Jenkins_logo.svg/1483px-Jenkins_logo.svg.png",
             },
+            {
+                name: "Heroku",
+                image:
+                    "https://i.pinimg.com/564x/85/8d/bc/858dbc95513619c2dc3689474bc3f556.jpg",
+            },
+            {
+                name: "Firebase",
+                image:
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThRTfkei28uwg1prMgu6qbbxkx9y_5IFJN9g&s",
+            },
         ],
     },
 ];
@@ -162,41 +186,49 @@ export const education = [
 export const projects = [
     {
         id: 0,
-        title: "Synq'd Mobile App",
+        title: "Satellite Image Segmentation",
         description:
-            "Developed a collaborative music app, using React Native, allowing users to request and vote on songs that get automatically added to the host’s Spotify queue. Integrated Spotify Web API to provide users real time playback, queue information, and support for automatic queueing functionality. Created a secure Node JS server to manage session and voting functionalities with little overhead.",
-        tags: ["JavaScript", "React Native", "Node JS"],
-        link: "https://apps.apple.com/us/app/synqd/id6476221500",
+            "This project was a final project for my Project in AI course. Programmed preprocessing functions to take raw image data and apply augmentations to enhance features, remove outliers, and increase variety. Images were then subtiled to reduce the amount of processing power required. Implemented a UNet model to perform segmentation on satellite imagery to detect settlements with or without electricity. Achieved an accuracy of 70% given a limited training dataset to work with. ",
+        tags: ["Python", "Segmentation", "Machine Learning", "Wandb"],
+        link: "",
     },
     {
         id: 1,
+        title: "Synq'd Mobile App",
+        description:
+            "This is a personal project I created. The idea came to me when I saw how difficult it can be to get unbiased music played in a long car ride. Developed a collaborative music app, using React Native, allowing users to request and vote on songs that get automatically added to the host’s Spotify queue. Integrated Spotify Web API to provide users real time playback, queue information, and support for automatic queueing functionality. Created a secure Node JS server to manage session and voting functionalities with little overhead.",
+        tags: ["JavaScript", "React Native", "Node.js"],
+        link: "https://apps.apple.com/us/app/synqd/id6476221500",
+    },
+    {
+        id: 2,
         title: "Memory Allocator Simulator",
         description:
-            "Developed a best-fit memory allocator in C with a reduced memory fragmentation, efficient resource utilization, and high performance. Implemented block coalescing to reduce fragmentation and allows for users flexibility at allocation.",
+            "This was a course project for my Principles in System Design course. Developed a best-fit memory allocator in C with a reduced memory fragmentation, efficient resource utilization, and high performance. Implemented block coalescing to reduce fragmentation and allows for users flexibility at allocation.",
         tags: ["C"],
         link: "https://github.com/Vedaantp/MemoryAllocatorSimulator",
     },
     {
-        id: 2,
+        id: 3,
         title: "MineSweeper Solver",
         description:
-            "Developed an algorithm in C++ that can solve minesweeper problems with an accuracy of 80%. Implemented DFS, backtracking, and heuristics to efficiently solve worlds in under 3 minutes.",
-        tags: ["C++", "Git"],
+            "This was a course project for my Intro to AI course. Developed an algorithm in C++ that can solve minesweeper problems with an accuracy of 80%. Implemented DFS, backtracking, and heuristics to efficiently solve worlds in under 3 minutes.",
+        tags: ["C++"],
         link: "https://github.com/Vedaantp/MinesweeperSolver",
     },
     {
-        id: 3,
+        id: 4,
         title: "Graph Coloring Game",
         description:
-            "Developed a graph coloring game that allows the user to adjust the graph and nodes to their liking. The objective of the game is to color the graph using the least amount of colors possible, however, a node cannot be the same color as it's neighbor. User can check if their answer is correct and/or see how the algorithm finds the answer.",
+            "This was a personal project I created. The idea came to me when I wanted to help others visualize a simple graph coloring problem that can be solved using a greedy approach. Developed a graph coloring game that allows the user to adjust the graph and nodes to their liking. The objective of the game is to color the graph using the least amount of colors possible, however, a node cannot be the same color as it's neighbor. User can check if their answer is correct and/or see how the algorithm finds the answer.",
         tags: ["HTML", "CSS", "JavaScript"],
         link: "https://vedaantp.github.io/GraphColoringGame/",
     },
     {
-        id: 4,
+        id: 5,
         title: "Pong Game",
         description:
-            "Developed a 2D ping pong game using the Unity game engine.",
+            "This was a personal project I created. I wanted to explore the Unity game engine so I decided to build a simple game to understand it. Developed a 2D ping pong game using the Unity game engine.",
         tags: ["C#", "Unity"],
         link: "https://vedaantp.github.io/PongGame/",
     },
