@@ -48,6 +48,11 @@ export const skills = [
                     "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/768px-JavaScript-logo.png",
             },
             {
+                name: "TypeScript",
+                image:
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png",
+            },
+            {
                 name: "HTML",
                 image:
                     "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/800px-HTML5_Badge.svg.png",
@@ -87,6 +92,11 @@ export const skills = [
                 image:
                     "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1280px-Bootstrap_logo.svg.png",
             },
+            {
+                name: "Node.js",
+                image:
+                    "https://static-00.iconduck.com/assets.00/nodejs-icon-2048x2048-rueyo8fw.png",
+            },
         ],
     },
     {
@@ -98,9 +108,9 @@ export const skills = [
                     "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png",
             },
             {
-                name: "Git",
+                name: "GitHub",
                 image:
-                    "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/1200px-Git_icon.svg.png",
+                    "https://cdn-icons-png.flaticon.com/512/25/25231.png",
             },
             {
                 name: "IntelliJ",
@@ -142,6 +152,11 @@ export const skills = [
                 image:
                     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThRTfkei28uwg1prMgu6qbbxkx9y_5IFJN9g&s",
             },
+            {
+                name: "AWS",
+                image:
+                    "https://cdn.freebiesupply.com/logos/large/2x/aws-logo-logo-png-transparent.png",
+            },
         ],
     },
 ];
@@ -153,7 +168,7 @@ export const experiences = [
         role: "Developer Intern",
         company: "Farmers Insurance",
         date: "June 2023 - August 2023",
-        desc: "This role consisted of responsibilities such as developing and maintaining APIs, consulting with the teams to create a plan for future projects that would increase productivity, and programming automated tasks to reduce the amount of manual labor required.",
+        desc: "This role consisted of responsibilities such as developing and maintaining APIs on Anypoint Platform, consulting with the teams to create a plan for future projects that would increase productivity, and programming automated tasks, using Python and Bash, to reduce manual labor.",
         skills: [
             "Java",
             "Python",
@@ -190,7 +205,7 @@ export const projects = [
         description:
             "This project was a final project for my Project in AI course. Programmed preprocessing functions to take raw image data and apply augmentations to enhance features, remove outliers, and increase variety. Images were then subtiled to reduce the amount of processing power required. Implemented a UNet model to perform segmentation on satellite imagery to detect settlements with or without electricity. Achieved an accuracy of 70% given a limited training dataset to work with. ",
         tags: ["Python", "Segmentation", "Machine Learning", "Wandb"],
-        link: "",
+        link: "https://github.com/Vedaantp/SatelliteImageSegmentation",
     },
     {
         id: 1,

@@ -3,7 +3,7 @@ import { AboutContainer, AboutBg, AboutInnerContainer, AboutLeftContainer, About
 import { Bio } from "../../data/constants";
 import Typewriter from "typewriter-effect";
 import AboutImg from "../../images/about.jpeg";
-import Resume from "../../images/Vedaant_Patel_Resume.pdf";
+import Resume from "../../images/VedaantPatelResume.pdf";
 
 const About = () => {
     return (
